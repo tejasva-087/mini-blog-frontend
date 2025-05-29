@@ -6,16 +6,40 @@
     align-items: center;
     position: relative;
 
+    // 1300px
+    @media (max-width: 84.375em) {
+      padding: 1.6rem 3.2rem;
+    }
+
+    // 900px
+    @media (max-width: 56.25em) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: 2.4rem;
+    }
+
     & > img {
       width: 100%;
+      max-width: 64rem;
+
+      // 900px
+      @media (max-width: 56.25em) {
+        width: clamp(3.4rem, 50vw, 28rem);
+        grid-row: 1;
+      }
     }
 
     & .heading-primary {
-      font-size: 10.8rem;
+      font-size: clamp(3.4rem, 7vw, 12rem);
       font-weight: 400;
       display: flex;
       flex-direction: column;
       line-height: 1.2;
+
+      // 900px
+      @media (max-width: 56.25em) {
+        font-size: clamp(2.4rem, 9vw, 4.4rem);
+      }
 
       & > span:nth-child(2) {
         display: flex;
@@ -23,7 +47,12 @@
         gap: 1.6rem;
 
         & > img {
-          height: 9rem;
+          height: clamp(3.4rem, 7vw, 100vw);
+
+          // 900px
+          @media (max-width: 56.25em) {
+            height: clamp(2.4rem, 9vw, 100vw);
+          }
         }
       }
     }

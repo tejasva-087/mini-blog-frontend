@@ -5,12 +5,12 @@ function HeroSection({ className = "" }) {
   return (
     <section className={`section-hero ${className}`}>
       <h1 className="heading-primary font-medium">
-        <span>Your space.</span>
+        <span className="clamp">Your space.</span>
         <span>
           <img src={vector} alt="heart vector image" />
-          <span>Your stories.</span>
+          <span className="clamp">Your stories.</span>
         </span>
-        <span>Your voice.</span>
+        <span className="clamp">Your voice.</span>
       </h1>
       <img src={plantVector} alt="Illustration displaying plants" />
     </section>
