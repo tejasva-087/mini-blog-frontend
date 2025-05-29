@@ -1,0 +1,8 @@
+.page {
+  &-hero {
+    height: 100svh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+  }
+}
