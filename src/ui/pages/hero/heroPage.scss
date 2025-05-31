@@ -1,0 +1,23 @@
+.hero-section {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100svh;
+
+  &--main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 2.4rem 4.8rem;
+  }
+
+  &--image {
+    display: block;
+    width: 80%;
+  }
+
+  &--illustration {
+    width: 5vw;
+    margin-right: 1.4rem;
+  }
+}

@@ -1,0 +1,12 @@
+.user-profile {
+  display: flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--grey-primary);
+
+  &--image {
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: var(--border-radius-default);
+  }
+}

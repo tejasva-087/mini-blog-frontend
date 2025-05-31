@@ -1,0 +1,13 @@
+.logo {
+  color: var(--grey-secondary);
+  padding: 0 !important;
+
+  & > .heading-tertiary {
+    font-weight: var(--font-default);
+
+    & > span {
+      font-weight: var(--font-semibold);
+      color: var(--color-brown-primary);
+    }
+  }
+}

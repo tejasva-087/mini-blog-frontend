@@ -1,0 +1,13 @@
+.input {
+  border: 0.1rem solid var(--grey-secondary);
+  padding: 0.8rem 1.2rem;
+  font-size: inherit;
+  color: inherit;
+  border-radius: var(--border-radius-default);
+  background-color: var(--white-primary);
+
+  &::placeholder {
+    font-size: 1.4rem;
+    color: var(--grey-tertiary);
+  }
+}

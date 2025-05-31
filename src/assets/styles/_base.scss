@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: var(--line-height-default);
+  font-weight: var(--font-default);
+  color: var(--grey-secondary);
+  font-size: 1.6rem;
+}
+
+*:focus {
+  outline: none;
+  // box-shadow: 0 0 0 0.4rem var(--color-brown-primary-tint);
+}
+
+.container {
+  max-width: 20rem;
+  margin: 0 auto;
+}
