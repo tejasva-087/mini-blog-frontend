@@ -5,9 +5,14 @@
 }
 
 .heading-primary {
-  font-size: 6vw;
+  font-size: clamp(3.4rem, 6vw, 100vw);
   line-height: var(--line-height-small);
   font-weight: var(--font-light);
+
+  // 900px
+  @media (max-width: 56.25em) {
+    font-size: clamp(3.4rem, 12vw, 5.4rem);
+  }
 }
 
 .heading-secondary {
