@@ -1,0 +1,38 @@
+.post {
+  border-bottom: 0.1rem solid var(--color-brown-tertiary);
+  padding: 2rem 4rem;
+
+  &-author {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: var(--grey-secondary);
+
+    &-link {
+      padding: 0 !important;
+    }
+
+    &-image {
+      width: 4rem;
+      border-radius: var(--border-radius-default);
+    }
+
+    &-text {
+      font-weight: var(--font-medium);
+    }
+  }
+}
+
+.clamp-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.clamp-paragraph {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

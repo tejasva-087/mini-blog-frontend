@@ -1,4 +1,5 @@
 import HeroPage from "./ui/pages/hero/HeroPage";
+import Posts from "./ui/pages/posts/Posts";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         required={true}
       /> */}
       {/* <Navigation searchBar={true} navOptions={true} userProfile={false} /> */}
-      <HeroPage />
+      {/* <HeroPage /> */}
+      <Posts />
     </>
   );
 }

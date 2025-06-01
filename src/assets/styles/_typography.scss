@@ -2,12 +2,12 @@
 .heading-secondary,
 .heading-tertiary {
   color: var(--grey-primary);
+  font-weight: var(--font-light);
 }
 
 .heading-primary {
   font-size: clamp(3.4rem, 6vw, 100vw);
   line-height: var(--line-height-small);
-  font-weight: var(--font-light);
 
   // 900px
   @media (max-width: 56.25em) {
@@ -17,10 +17,15 @@
 
 .heading-secondary {
   font-size: 4.4rem;
-  line-height: var(--line-height-medium);
+  line-height: var(--line-height-small);
 }
 
 .heading-tertiary {
   font-size: 3rem;
   line-height: var(--line-height-medium);
+}
+
+.text-primary {
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph-default);
 }

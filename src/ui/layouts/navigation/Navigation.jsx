@@ -12,6 +12,7 @@ function Navigation({
   return (
     <header className="header">
       <Logo />
+
       {searchBar && <SearchBar className="header--search-bar" />}
 
       {navOptions && (

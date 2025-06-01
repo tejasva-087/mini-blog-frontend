@@ -15,7 +15,7 @@ function SearchBar() {
         setInputValue={setQuery}
       />
 
-      <button type="button" className="search-bar__btn">
+      <button type="button" className="button search-bar__btn">
         <MagnifyingGlass className="search-bar__icon" />
       </button>
     </form>

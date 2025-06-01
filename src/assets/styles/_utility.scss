@@ -9,3 +9,28 @@
 .align-center {
   align-items: center;
 }
+
+.margin-bottom {
+  &-sml {
+    margin-bottom: 1rem;
+  }
+
+  &-mid {
+    margin-bottom: 2rem;
+  }
+
+  &-big {
+    margin-bottom: 3rem;
+  }
+}
+
+.button {
+  background: none;
+  border: none;
+  background-color: var(--white-primary);
+  padding: 0.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

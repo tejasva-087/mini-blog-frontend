@@ -1,0 +1,42 @@
+.post {
+  &-container {
+    width: 100%;
+    padding: 2.4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    row-gap: 3.4rem;
+  }
+
+  &-tags {
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+
+    &-container {
+      padding: 2rem 4rem;
+    }
+
+    &-heading {
+      font-size: 1.8rem;
+      color: var(--grey-primary);
+      font-weight: var(--font-medium);
+    }
+
+    &-btn {
+      border: 0.1rem solid var(--grey-secondary);
+      color: var(--grey-secondary);
+      border-radius: var(--border-radius-default);
+      font-size: 1.6rem;
+    }
+  }
+
+  &-load-btn {
+    padding: 1.4rem 2.4rem;
+    background-color: var(--white-tertiary);
+    border-radius: var(--border-radius-default);
+    grid-row: 2;
+    justify-self: center;
+  }
+}
