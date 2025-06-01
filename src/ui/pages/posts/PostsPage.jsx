@@ -1,9 +1,9 @@
 import Navigation from "../../layouts/navigation/Navigation";
 import Post from "../../layouts/post/Post";
 import Link from "../../components/link/Link";
-import "./posts.scss";
+import "./postsPage.scss";
 
-function Posts() {
+function PostsPage() {
   return (
     <>
       <Navigation searchBar={true} userProfile={true} navOptions={false} />
@@ -54,7 +54,7 @@ function Posts() {
         </button>
         <aside className="post-tags-container">
           <p className="text-priamry post-tags-heading margin-bottom-mid">
-            Select from different category of posts
+            Select from different category of postsPage
           </p>
           <div className="post-tags">
             <button className="button post-tags-btn" type="button">
@@ -90,4 +90,4 @@ function Posts() {
   );
 }
 
-export default Posts;
+export default PostsPage;

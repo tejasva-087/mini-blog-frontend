@@ -31,7 +31,7 @@ function Post({
           {paragraphs[0]}
         </p>
       )}
-      <Link className="post-author-link">
+      <Link className="post-author-link" href="/author">
         <figure className="post-author">
           <img src={image} alt="author image" className="post-author-image" />
           <figcaption className="author-post-text">{author}</figcaption>

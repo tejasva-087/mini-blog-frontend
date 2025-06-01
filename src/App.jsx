@@ -1,5 +1,6 @@
 import HeroPage from "./ui/pages/hero/HeroPage";
-import Posts from "./ui/pages/posts/Posts";
+import PostsPage from "./ui/pages/posts/PostsPage";
+import PostPreviewPage from "./ui/pages/postPreviewPage/postPreviewPage";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       /> */}
       {/* <Navigation searchBar={true} navOptions={true} userProfile={false} /> */}
       {/* <HeroPage /> */}
-      <Posts />
+      {/* <PostsPage /> */}
+      <PostPreviewPage />
     </>
   );
 }
