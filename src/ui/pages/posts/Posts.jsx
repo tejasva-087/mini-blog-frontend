@@ -48,19 +48,6 @@ function Posts() {
               ]}
             />
           </li>
-          <li>
-            <Post
-              image={`https://api.dicebear.com/9.x/thumbs/svg?seed=${Math.floor(
-                Math.random() * 100000000
-              )}`}
-              author="Keven Bear"
-              title="Lorem ipsum dolor sit amet consectetur adipisicing elit.  dolor of pariatur nulla sunt quod sequi."
-              paragraphs={[
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus officia pariatur nulla sunt quod sequi.",
-              ]}
-            />
-          </li>
         </ul>
         <button type="button" className="button post-load-btn">
           load more

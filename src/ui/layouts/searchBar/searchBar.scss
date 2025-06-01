@@ -25,4 +25,14 @@
     height: 1.6rem;
     color: var(--grey-secondary);
   }
+
+  // 900px
+  @media (max-width: 56.25em) {
+    width: 80%;
+  }
+
+  // 500px
+  @media (max-width: 31.25em) {
+    width: 100%;
+  }
 }

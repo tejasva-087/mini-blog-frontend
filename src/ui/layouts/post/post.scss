@@ -21,6 +21,10 @@
       font-weight: var(--font-medium);
     }
   }
+
+  @media (max-width: 75em) {
+    padding: 1rem 2rem;
+  }
 }
 
 .clamp-title {

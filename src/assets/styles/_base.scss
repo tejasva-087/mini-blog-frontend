@@ -7,7 +7,20 @@
 html {
   font-size: 62.5%;
 
-  scroll-behavior: smooth;
+  // 1700px and above
+  @media (min-width: 106.25em) {
+    font-size: 100%;
+  }
+
+  // 1200px
+  @media (max-width: 75em) {
+    font-size: 56.25%;
+  }
+
+  // 900px
+  @media (max-width: 56.25em) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -20,7 +33,7 @@ body {
 
 *:focus {
   outline: none;
-  // box-shadow: 0 0 0 0.4rem var(--color-brown-primary-tint);
+  box-shadow: 0 0 0 0.4rem var(--color-brown-primary-tint);
 }
 
 .container {
