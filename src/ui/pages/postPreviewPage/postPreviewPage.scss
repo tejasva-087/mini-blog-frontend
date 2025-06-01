@@ -4,4 +4,11 @@
     margin: 0 auto;
     padding: 3.4rem 0;
   }
+
+  // 900px
+  @media (max-width: 56.25em) {
+    &-preview-container {
+      width: 80vw;
+    }
+  }
 }
