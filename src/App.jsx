@@ -1,6 +1,8 @@
 import HeroPage from "./ui/pages/hero/HeroPage";
 import PostsPage from "./ui/pages/posts/PostsPage";
 import PostPreviewPage from "./ui/pages/postPreviewPage/postPreviewPage";
+import SignUpForm from "./ui/layouts/signUpForm/SignUpForm";
+import AuthPage from "./ui/pages/authPage/AuthPage";
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
       {/* <Navigation searchBar={true} navOptions={true} userProfile={false} /> */}
       {/* <HeroPage /> */}
       {/* <PostsPage /> */}
-      <PostPreviewPage />
+      {/* <PostPreviewPage /> */}
+      {/* <SignUpForm /> */}
+      <AuthPage />
     </>
   );
 }

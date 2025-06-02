@@ -1,0 +1,18 @@
+.sign-up {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  &--btn {
+    background-color: var(--color-brown-primary) !important;
+    color: var(--white-primary) !important;
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: var(--border-radius-default);
+  }
+
+  &--warning {
+    font-size: 1.4rem;
+    color: var(--color-red);
+  }
+}

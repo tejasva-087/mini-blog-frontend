@@ -5,16 +5,17 @@ function Input({
   placeholder = "",
   inputValue,
   setInputValue,
-  required = false,
+  id = "",
+  type = "text",
 }) {
   return (
     <input
-      type="text"
+      id={id}
+      type={type}
       placeholder={`${placeholder}`}
       className={`input ${className}`}
       value={inputValue}
       onChange={(e) => setInputValue(e.target.value)}
-      required={required}
     />
   );
 }
