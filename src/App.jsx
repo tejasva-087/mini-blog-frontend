@@ -1,35 +1,22 @@
 import HeroPage from "./ui/pages/hero/HeroPage";
 import PostsPage from "./ui/pages/posts/PostsPage";
 import PostPreviewPage from "./ui/pages/postPreviewPage/postPreviewPage";
-import SignUpForm from "./ui/layouts/signUpForm/SignUpForm";
 import AuthPage from "./ui/pages/authPage/AuthPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserProfile from "./ui/layouts/userProfile/UserProfile";
 
 function App() {
   return (
     <>
-      {/* <Link href="/link" className="link--full">
-        Hello
-      </Link>
-
-      <Link href="/link" className="link--underline">
-        Hello
-      </Link>
-
-      <Link href="/link" className="link--btn">
-        Hello
-      </Link>
-      <Input
-        placeholder="Hello"
-        inputValue={value}
-        setInputValue={setValue}
-        required={true}
-      /> */}
-      {/* <Navigation searchBar={true} navOptions={true} userProfile={false} /> */}
-      {/* <HeroPage /> */}
-      {/* <PostsPage /> */}
-      {/* <PostPreviewPage /> */}
-      {/* <SignUpForm /> */}
-      <AuthPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HeroPage />} />
+          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/user" element={<UserProfile />} />
+          <Route path="/posts" element={<PostsPage />} />
+          <Route path="/post" element={<PostPreviewPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

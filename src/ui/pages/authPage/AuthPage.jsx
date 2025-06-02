@@ -1,10 +1,13 @@
 import Logo from "../../components/logo/Logo";
 import SignUpForm from "../../layouts/signUpForm/SignUpForm";
+import LogInForm from "../../layouts/logInForm/LogInForm";
+("./");
 import rightVector from "../../../assets/images/rightVector.svg";
 import leftVector from "../../../assets/images/leftVector.svg";
 import "./authPage.scss";
 import Button from "../../components/Button/Button";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function AuthPage() {
   const [state, setState] = useState("sign-up");
@@ -29,7 +32,7 @@ function AuthPage() {
 
       {state === "log-in" && (
         <>
-          <SignUpForm className="auth-form" />
+          <LogInForm className="auth-form" />
           <p className="">
             Create new account? <Button onClick={toggleState}>Sign up</Button>
           </p>

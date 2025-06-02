@@ -8,6 +8,7 @@ function Navigation({
   searchBar = false,
   userProfile = false,
   navOptions = true,
+  userName = "",
 }) {
   return (
     <header className="header">
@@ -20,7 +21,7 @@ function Navigation({
           <Link href="/posts" className="link--underline">
             posts
           </Link>
-          <Link href="/signup" className="link--full">
+          <Link href="/auth" className="link--full">
             get started
           </Link>
         </nav>
@@ -30,7 +31,7 @@ function Navigation({
         <UserProfile
           className="header--user-profile"
           imageSeed={Math.floor(Math.random() * 100000000)}
-          userName="Tejasva"
+          userName={userName}
         />
       )}
     </header>

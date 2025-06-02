@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import validator from "validator";
 import InputBox from "../inputBox/InputBox";
-import "./signUpForm.scss";
 import Button from "../../components/Button/Button";
+import "./logInForm.scss";
 import { useNavigate } from "react-router-dom";
 
-function SignUpForm({ className = "" }) {
-  const [name, setName] = useState("");
+function LogInForm({ className = "" }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordConfirm, setPasswordConfirm] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [jwtToken, setJwtToken] = useState("");
@@ -18,13 +16,7 @@ function SignUpForm({ className = "" }) {
   const validate = function (e) {
     e.preventDefault();
 
-    if (!name || !validator.isAlpha(name.split(" ").join(""))) {
-      setError(true);
-      setErrorMessage(
-        "The name entered is not valid. Please enter a valid full name."
-      );
-      return;
-    } else if (!email || !validator.isEmail(email)) {
+    if (!email || !validator.isEmail(email)) {
       setError(true);
       setErrorMessage(
         "The email address entered is not valid. Please enter a valid email."
@@ -36,24 +28,18 @@ function SignUpForm({ className = "" }) {
         "Password must be at least 8 characters long. Please choose a stronger password."
       );
       return;
-    } else if (password !== passwordConfirm) {
-      setError(true);
-      setErrorMessage(
-        "Passwords do not match. Please re-enter to confirm your password."
-      );
-      return;
     } else {
       setError(false);
       setErrorMessage("");
-      signUp();
+      logIn();
     }
   };
 
-  const signUp = async function () {
+  const logIn = async function () {
     try {
-      const userData = { name, email, password, passwordConfirm };
+      const userData = { email, password };
 
-      const response = await fetch("http://localhost:3000/api/v1/user/signup", {
+      const response = await fetch("http://localhost:3000/api/v1/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,6 +54,7 @@ function SignUpForm({ className = "" }) {
       }
 
       setJwtToken(result.token);
+      console.log(result.token);
     } catch (err) {
       setError(true);
       setErrorMessage(err.message);
@@ -82,17 +69,8 @@ function SignUpForm({ className = "" }) {
   }, [jwtToken]);
 
   return (
-    <form className={`sign-up ${className}`} onSubmit={validate}>
-      <h3 className="heading-tertiary margin-bottom-sml">Sign Up</h3>
-      <InputBox
-        className=""
-        placeholder="eg: Jhon Doe"
-        inputValue={name}
-        setInputValue={setName}
-        id="name"
-        type="text"
-        label="Enter name"
-      ></InputBox>
+    <form className={`log-in ${className}`} onSubmit={validate}>
+      <h3 className="heading-tertiary margin-bottom-sml">Log In</h3>
 
       <InputBox
         className=""
@@ -114,19 +92,10 @@ function SignUpForm({ className = "" }) {
         label="Enter password"
       ></InputBox>
 
-      <InputBox
-        className=""
-        placeholder="confirm password"
-        inputValue={passwordConfirm}
-        setInputValue={setPasswordConfirm}
-        id="passwordConfirm"
-        type="password"
-        label="Confirm password"
-      ></InputBox>
       {error && <p className="sign-up--warning">{errorMessage}</p>}
-      <Button className="sign-up--btn">Sign up</Button>
+      <Button className="sign-up--btn">Log in</Button>
     </form>
   );
 }
 
-export default SignUpForm;
+export default LogInForm;
